@@ -4,7 +4,6 @@
 # Import <
 import numpy as np
 import pandas as pd
-from numpy import concatenate as concat
 
 # >
 
@@ -89,13 +88,14 @@ def funcCrossover(selection: np.ndarray) -> np.ndarray:
     a, b = selection
     k = np.random.randint(0, len(selection[0]))
 
-    return np.array([concat([a[k:], b[:k]]), concat([b[k:], a[:k]])])
+    return np.array([np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])])
 
 
-def funcMutation():
+def funcMutation(selection: np.ndarray) -> np.ndarray:
     '''  '''
 
-    pass
+    print(len(selection))
+    print(len(selection[0]))
 
 
 # Main <
