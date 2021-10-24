@@ -88,14 +88,18 @@ def funcCrossover(selection: np.ndarray) -> np.ndarray:
     a, b = selection
     k = np.random.randint(0, len(selection[0]))
 
-    return np.array([np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])])
+    return [np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])]
 
 
 def funcMutation(selection: np.ndarray) -> np.ndarray:
     '''  '''
 
-    print(len(selection))
-    print(len(selection[0]))
+    # for gene in selection <
+    for c in [c for s in selection for c in s]:
+
+        result =
+
+    # >
 
 
 # Main <
