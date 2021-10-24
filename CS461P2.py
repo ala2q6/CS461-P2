@@ -79,7 +79,13 @@ def funcSelection(population: np.ndarray) -> np.ndarray:
                                  replace = False,
                                  size = 2)
 
-    return [c for c, u in [population[s] for s in selection]]
+    return np.array([c for c, u in [population[s] for s in selection]])
+
+
+def funcCrossover(selection: np.ndarray):
+    '''  '''
+
+    print(len(selection))
 
 
 # Main <
@@ -103,8 +109,7 @@ if (__name__ == '__main__'):
 
         # (S -> C -> M -> F) <
         selection = funcSelection(population)
-        print(len(selection[1]))
-        #
+        crossover = funcCrossover(selection)
         #
         #
         generation += 1
