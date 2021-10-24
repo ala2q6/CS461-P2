@@ -74,11 +74,12 @@ def funcFitness(size: int, load: int, population: list) -> (list, np.ndarray):
 def funcSelection(population: np.ndarray):
     '''  '''
 
-    print(len(population))
-    for i, j in population:
+    selection = np.random.choice(p = [u for c, u in population],
+                                 a = len(population),
+                                 replace = False,
+                                 size = 2)
 
-        print(j, i)
-
+    print(selection)
 
 # Main <
 if (__name__ == '__main__'):
@@ -105,6 +106,7 @@ if (__name__ == '__main__'):
         #
         #
         generation += 1
+        input('; ') # remove
 
         # >
 
@@ -136,8 +138,6 @@ if (__name__ == '__main__'):
             # >
 
         # >
-
-        break # remove
 
     # >
 
