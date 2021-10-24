@@ -71,7 +71,7 @@ def funcFitness(size: int, load: int, population: list) -> (list, np.ndarray):
     return uListA, np.array(ucList[:size])
 
 
-def funcSelection(population: np.ndarray):
+def funcSelection(population: np.ndarray) -> np.ndarray:
     '''  '''
 
     selection = np.random.choice(p = [u for c, u in population],
@@ -79,9 +79,8 @@ def funcSelection(population: np.ndarray):
                                  replace = False,
                                  size = 2)
 
-    for i in selection:
+    return [c for c, u in [population[s] for s in selection]]
 
-        print(population[i])
 
 # Main <
 if (__name__ == '__main__'):
@@ -103,7 +102,8 @@ if (__name__ == '__main__'):
     while (notImproving is False):
 
         # (S -> C -> M -> F) <
-        funcSelection(population)
+        selection = funcSelection(population)
+        print(len(selection[1]))
         #
         #
         #
