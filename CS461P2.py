@@ -79,7 +79,9 @@ def funcSelection(population: np.ndarray):
                                  replace = False,
                                  size = 2)
 
-    print(selection)
+    for i in selection:
+
+        print(population[i])
 
 # Main <
 if (__name__ == '__main__'):
