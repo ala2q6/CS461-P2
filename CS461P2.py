@@ -85,7 +85,19 @@ def funcSelection(population: np.ndarray) -> np.ndarray:
 def funcCrossover(selection: np.ndarray):
     '''  '''
 
-    print(len(selection))
+    a, b = selection
+    k = np.random.randint(0, len(selection[0]))
+
+    print(len(a[:k]))
+    print(len(a[k:]))
+
+    print()
+
+    print(len(b[:k]))
+    print(len(b[k:]))
+
+    print(np.concatenate([a[k:], b[:k]]))
+    print(len(np.concatenate([a[k:], b[:k]])))
 
 
 # Main <
