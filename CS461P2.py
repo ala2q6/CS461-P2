@@ -4,6 +4,7 @@
 # Import <
 import numpy as np
 import pandas as pd
+from numpy import concatenate as concat
 
 # >
 
@@ -82,22 +83,19 @@ def funcSelection(population: np.ndarray) -> np.ndarray:
     return np.array([c for c, u in [population[s] for s in selection]])
 
 
-def funcCrossover(selection: np.ndarray):
+def funcCrossover(selection: np.ndarray) -> np.ndarray:
     '''  '''
 
     a, b = selection
     k = np.random.randint(0, len(selection[0]))
 
-    print(len(a[:k]))
-    print(len(a[k:]))
+    return np.array([concat([a[k:], b[:k]]), concat([b[k:], a[:k]])])
 
-    print()
 
-    print(len(b[:k]))
-    print(len(b[k:]))
+def funcMutation():
+    '''  '''
 
-    print(np.concatenate([a[k:], b[:k]]))
-    print(len(np.concatenate([a[k:], b[:k]])))
+    pass
 
 
 # Main <
@@ -122,7 +120,7 @@ if (__name__ == '__main__'):
         # (S -> C -> M -> F) <
         selection = funcSelection(population)
         crossover = funcCrossover(selection)
-        #
+        offspring = funcMutation(crossover)
         #
         generation += 1
         input('; ') # remove
