@@ -1,12 +1,10 @@
 # CS461P2 by Alex Arbuckle #
 
 
-# < 00000000000000000000
-
-
 # Import <
 import numpy as np
 import pandas as pd
+from random import choices
 
 # >
 
@@ -77,12 +75,18 @@ def funcFitness(size: int, load: int, population: list) -> (list, np.ndarray):
 def funcSelection(population: np.ndarray) -> np.ndarray:
     '''  '''
 
-    selection = np.random.choice(p = [u for c, u in population],
-                                 a = len(population),
-                                 replace = False,
-                                 size = 2)
+    selection = []
+    uList, cList = [u for c, u in population], [c for c, u in population]
+    while (len(selection) < 2):
 
-    return np.array([c for c, u in [population[s] for s in selection]])
+        result = choices(cList, uList, k = 1)
+
+        # if (result is new) <
+        if (result not in selection): selection.append(result[0])
+
+        # >
+
+    return selection
 
 
 def funcCrossover(selection: np.ndarray) -> list:
@@ -180,9 +184,16 @@ if (__name__ == '__main__'):
 
         # >
 
+        # Output <
+
+        print('generation')
+        print(len(listAverage))
+
+        # >
+
     # >
 
-    # Output <
+    # Write <
 
 
     # >
