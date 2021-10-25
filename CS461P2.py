@@ -138,8 +138,8 @@ if (__name__ == '__main__'):
 
     # >
 
-    generation, notImproving = 0, False
-    while (notImproving is False):
+    generation = 0
+    while (True):
 
         # (S -> C -> M) <
         selection = funcSelection(population)
@@ -161,8 +161,10 @@ if (__name__ == '__main__'):
             listAverage.append(np.average(uList))
             listMaximum.append(np.max(uList))
 
-            print(f'Size: {size}\nGeneration: {generation // size}\n')
+            print(f'Size: {size}\nGeneration: {generation}\n')
             print(f'Maximum: {listMaximum[-1]}\nAverage: {listAverage[-1]}\n')
+
+            if (input('\n[Q]uit') == 'Q'): break
 
         # >
 
@@ -190,7 +192,16 @@ if (__name__ == '__main__'):
     # >
 
     # Write <
+    with open('output.txt', 'w') as fileVariable:
 
+        g = 1
+        for a, m in zip(listAverage, listMaximum):
+
+            output = f'Generation: {g}\n\nMaximum: {m}\nAverage: {a}\n'
+            fileVariable.write(output)
+
+        output = f'\nMaximum: {max(listMaximum)}'
+        fileVariable.write(output)
 
     # >
 
