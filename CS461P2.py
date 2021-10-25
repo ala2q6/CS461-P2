@@ -91,7 +91,7 @@ def funcCrossover(selection: np.ndarray) -> list:
     return [np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])]
 
 
-def funcMutation(selection: list) -> np.ndarray:
+def funcMutation(selection: list) -> list:
     '''  '''
 
     # for gene in selection <
@@ -112,7 +112,7 @@ def funcMutation(selection: list) -> np.ndarray:
 
     # >
 
-    return np.array([output[size:], output[:size]])
+    return [output[size:], output[:size]]
 
 
 # Main <
@@ -134,15 +134,29 @@ if (__name__ == '__main__'):
     generation, notImproving = 0, False
     while (notImproving is False):
 
-        # (S -> C -> M -> F) <
+        # (S -> C -> M) <
         selection = funcSelection(population)
         crossover = funcCrossover(selection)
         offspring = funcMutation(crossover)
 
+        # >
+
+        # (F) <
+        population = [c for c, u in population] + [o for o in offspring]
+        for i in population:
+
+            print(i)
+
+        print()
+
+        for i in offspring:
+
+            print(i)
+
         print(len(offspring))
         print(len(offspring[0]))
-        print(len(offspring[1]))
-        generation += 1
+
+
         input('; ') # remove
 
         # >
