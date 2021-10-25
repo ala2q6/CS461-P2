@@ -161,10 +161,10 @@ if (__name__ == '__main__'):
             listAverage.append(np.average(uList))
             listMaximum.append(np.max(uList))
 
-            print(f'Size: {size}\nGeneration: {generation}\n')
+            print(f'\nSize: {size}\nGeneration: {generation}\n')
             print(f'Maximum: {listMaximum[-1]}\nAverage: {listAverage[-1]}\n')
 
-            if (input('\n[Q]uit') == 'Q'): break
+            if (input('\n[Q]uit\n\nInput: ') == 'Q'): break
 
         # >
 
