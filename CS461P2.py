@@ -164,8 +164,6 @@ if (__name__ == '__main__'):
             print(f'\nSize: {size}\nGeneration: {generation}\n')
             print(f'Maximum: {listMaximum[-1]}\nAverage: {listAverage[-1]}\n')
 
-            if (input('\n[Q]uit\n\nInput: ') == 'Q'): break
-
         # >
 
         # Condition <
@@ -199,6 +197,7 @@ if (__name__ == '__main__'):
 
             output = f'Generation: {g}\n\nMaximum: {m}\nAverage: {a}\n'
             fileVariable.write(output)
+            g += 1
 
         output = f'\nMaximum: {max(listMaximum)}'
         fileVariable.write(output)
