@@ -93,7 +93,7 @@ def funcCrossover(selection: np.ndarray) -> list:
     '''  '''
 
     a, b = selection
-    k = np.random.randint(0, len(selection[0]))
+    k = np.random.randint(1, len(selection[0]))
 
     return [np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])]
 
@@ -161,6 +161,9 @@ if (__name__ == '__main__'):
             listAverage.append(np.average(uList))
             listMaximum.append(np.max(uList))
 
+            print(f'Size: {size}\nGeneration: {generation // size}\n')
+            print(f'Maximum: {listMaximum[-1]}\nAverage: {listAverage[-1]}\n')
+
         # >
 
         # Condition <
@@ -181,13 +184,6 @@ if (__name__ == '__main__'):
             if (outcome.count(1) != 10): break
 
             # >
-
-        # >
-
-        # Output <
-
-        print('generation')
-        print(len(listAverage))
 
         # >
 
