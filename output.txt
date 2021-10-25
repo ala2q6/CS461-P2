@@ -1,0 +1,122 @@
+Generation: 1
+
+Maximum: 256.90000000000003
+Average: 191.5068627450981
+Generation: 2
+
+Maximum: 285.0
+Average: 243.35588235294117
+Generation: 3
+
+Maximum: 319.1999999999999
+Average: 273.2705882352941
+Generation: 4
+
+Maximum: 335.09999999999997
+Average: 292.0627450980392
+Generation: 5
+
+Maximum: 355.00000000000006
+Average: 308.2245098039216
+Generation: 6
+
+Maximum: 377.09999999999997
+Average: 327.121568627451
+Generation: 7
+
+Maximum: 388.29999999999995
+Average: 346.228431372549
+Generation: 8
+
+Maximum: 414.7999999999998
+Average: 364.3656862745098
+Generation: 9
+
+Maximum: 427.3
+Average: 379.4823529411765
+Generation: 10
+
+Maximum: 443.49999999999994
+Average: 392.7656862745098
+Generation: 11
+
+Maximum: 460.5999999999998
+Average: 405.7941176470587
+Generation: 12
+
+Maximum: 467.3999999999998
+Average: 416.1617647058822
+Generation: 13
+
+Maximum: 475.2999999999999
+Average: 425.02156862745096
+Generation: 14
+
+Maximum: 475.2999999999999
+Average: 436.21666666666664
+Generation: 15
+
+Maximum: 500.1
+Average: 447.0823529411764
+Generation: 16
+
+Maximum: 501.6999999999998
+Average: 459.9323529411763
+Generation: 17
+
+Maximum: 518.5999999999998
+Average: 470.62647058823524
+Generation: 18
+
+Maximum: 519.8000000000002
+Average: 477.91372549019604
+Generation: 19
+
+Maximum: 521.3999999999999
+Average: 486.91470588235285
+Generation: 20
+
+Maximum: 523.5999999999999
+Average: 498.2068627450979
+Generation: 21
+
+Maximum: 564.4999999999999
+Average: 511.4941176470587
+Generation: 22
+
+Maximum: 572.3999999999999
+Average: 525.0107843137255
+Generation: 23
+
+Maximum: 617.4000000000001
+Average: 542.5107843137255
+Generation: 24
+
+Maximum: 633.4
+Average: 565.9117647058822
+Generation: 25
+
+Maximum: 647.6
+Average: 583.706862745098
+Generation: 26
+
+Maximum: 647.6
+Average: 595.2794117647059
+Generation: 27
+
+Maximum: 665.7999999999998
+Average: 609.4941176470589
+Generation: 28
+
+Maximum: 686.3999999999994
+Average: 621.5696078431374
+Generation: 29
+
+Maximum: 686.3999999999994
+Average: 633.2715686274511
+Generation: 30
+
+Maximum: 686.3999999999994
+Average: 642.292156862745
+
+Maximum: 686.3999999999994
