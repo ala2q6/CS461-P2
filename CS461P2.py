@@ -82,7 +82,7 @@ def funcSelection(population: np.ndarray) -> np.ndarray:
     return np.array([c for c, u in [population[s] for s in selection]])
 
 
-def funcCrossover(selection: np.ndarray) -> np.ndarray:
+def funcCrossover(selection: np.ndarray) -> list:
     '''  '''
 
     a, b = selection
@@ -91,15 +91,15 @@ def funcCrossover(selection: np.ndarray) -> np.ndarray:
     return [np.concatenate([a[k:], b[:k]]), np.concatenate([b[k:], a[:k]])]
 
 
-def funcMutation(selection: np.ndarray) -> np.ndarray:
+def funcMutation(selection: list) -> np.ndarray:
     '''  '''
 
     # for gene in selection <
-    output, length = [], len(selection)
+    output, size = [], len(selection[0])
     for c in [c for s in selection for c in s]:
 
         # if (1 in 10 000) <
-        if (np.random.randint(0, 10000) == 1):
+        if (np.random.randint(0, 100) == 1):
 
             # Flip <
             c = ['1' if (c[0] == '0') else ('0'), c[1], c[2]]
@@ -112,8 +112,7 @@ def funcMutation(selection: np.ndarray) -> np.ndarray:
 
     # >
 
-    print(len(output))
-    return 1 # remove
+    return np.array([output[size:], output[:size]])
 
 
 # Main <
@@ -139,7 +138,10 @@ if (__name__ == '__main__'):
         selection = funcSelection(population)
         crossover = funcCrossover(selection)
         offspring = funcMutation(crossover)
-        #
+
+        print(len(offspring))
+        print(len(offspring[0]))
+        print(len(offspring[1]))
         generation += 1
         input('; ') # remove
 
