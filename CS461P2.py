@@ -1,6 +1,9 @@
 # CS461P2 by Alex Arbuckle #
 
 
+# < 00000000000000000000
+
+
 # Import <
 import numpy as np
 import pandas as pd
@@ -49,8 +52,8 @@ def funcFitness(size: int, load: int, population: list) -> (list, np.ndarray):
     uListA, wList = [], []
     for c in population:
 
-        chromosome = [[g[1], g[2]] for g in c if (g[0] == '1')]
-        u, w = np.sum(chromosome, axis = 0)
+        chromosome = np.array([[g[1], g[2]] for g in c if (g[0] == '1')])
+        u, w = np.sum(chromosome.astype(np.float), axis = 0)
         uListA.append(u)
         wList.append(w)
 
@@ -143,21 +146,8 @@ if (__name__ == '__main__'):
 
         # (F) <
         population = [c for c, u in population] + [o for o in offspring]
-        for i in population:
-
-            print(i)
-
-        print()
-
-        for i in offspring:
-
-            print(i)
-
-        print(len(offspring))
-        print(len(offspring[0]))
-
-
-        input('; ') # remove
+        uList, population = funcFitness(size, load, population)
+        generation += 1
 
         # >
 
