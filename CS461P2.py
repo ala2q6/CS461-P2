@@ -95,11 +95,25 @@ def funcMutation(selection: np.ndarray) -> np.ndarray:
     '''  '''
 
     # for gene in selection <
+    output, length = [], len(selection)
     for c in [c for s in selection for c in s]:
 
-        result =
+        # if (1 in 10 000) <
+        if (np.random.randint(0, 10000) == 1):
+
+            # Flip <
+            c = ['1' if (c[0] == '0') else ('0'), c[1], c[2]]
+
+            # >
+
+        # >
+
+        output.append(list(c))
 
     # >
+
+    print(len(output))
+    return 1 # remove
 
 
 # Main <
