@@ -43,3 +43,7 @@ Generation: 3000
 Maximum: 686.3999999999994
 Average: 642.292156862745
 ```
+
+---
+
+[**`Python`**](https://github.com/lxRbckl/lxRbckl/blob/main/Python/README.md)
