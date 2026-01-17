@@ -1,5 +1,10 @@
 # CS461 P2
-> [University of Missouri - Kansas City](https://www.umkc.edu/): [CS461](https://catalog.umkc.edu/search/?P=COMP-SCI%20461): Project 2
+> University of Missouri - Kansas City: CS461: Project 2
+>
+> **`Python`**
+
+---
+## Output
 
 ```
 Size: 100
@@ -45,7 +50,3 @@ Average: 642.292156862745
 ```
 
 ---
-
-[**`Python`**](https://github.com/lxRbckl/lxRbckl/blob/main/Python/README.md)
-
-# 
